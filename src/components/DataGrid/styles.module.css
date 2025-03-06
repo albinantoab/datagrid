@@ -1,0 +1,24 @@
+.Table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.Table th, .Table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.Table th {
+    background-color: #f2f2f2;
+}
+
+.Topbar {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    gap: 10px;
+}
