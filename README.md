@@ -2,6 +2,8 @@
 
 A data grid component for React. 
 
+Deployed at: https://albinantoab.github.io/datagrid/
+
 ### Features
 
 - Selectable rows
