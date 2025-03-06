@@ -38,7 +38,7 @@ interface TopbarProps<T> extends SelectableProps<T> {
 
 interface DataGridProps<T extends Record<string, unknown>> extends Pick<SelectableProps<T>, 'isSelectable'> {
   data: T[];
-  columns: DataGridColumn[];
+  columns: DataGridColumn<T>[];
   topbarProps?: TopbarProps<T>;
   uniqueKey: string;
   /**

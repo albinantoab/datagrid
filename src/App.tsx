@@ -1,6 +1,9 @@
 import './App.css'
-import { DataGrid, Download } from './components'
+
+import { DataGrid, Download, Status, StatusProps } from './components'
 import { DataGridColumn } from './components/DataGrid/types'
+
+
 interface Data extends Record<string, unknown> {
   name: string;
   device: string;
@@ -18,11 +21,11 @@ const data: Data[] =
 ]
 
 
-const columns: DataGridColumn[] = [
+const columns: DataGridColumn<Data>[] = [
   { id: 'name', label: 'Name', accessor: 'name' },
   { id: 'device', label: 'Device', accessor: 'device' },
   { id: 'path', label: 'Path', accessor: 'path' },
-  { id: 'status', label: 'Status', accessor: 'status' },
+  { id: 'status', label: 'Status', accessor: 'status', customRender: (row) => <Status status={row.status as StatusProps['status']} /> },
 ]
 
 
